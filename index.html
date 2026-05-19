@@ -68,8 +68,10 @@
             sizes="16x16"
             href="./assets/images/favicon-16x16.png"
         />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="manifest" href="./manifest.json" />
         <meta name="theme-color" content="#191919" />
+        <link rel="stylesheet" type="text/css" href="./ch-branding.css" />
+        <script src="./ch-header.js" defer></script>
     </head>
 
     <body>
@@ -1237,7 +1239,7 @@
                     window.addEventListener("load", async () => {
                         const registration =
                             await navigator.serviceWorker.register(
-                                "/service-worker.js",
+                                "./service-worker.js",
                             );
 
                         if (registration.waiting) {
