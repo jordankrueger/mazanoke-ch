@@ -8,6 +8,13 @@ COPY ./assets /usr/share/nginx/html/assets
 COPY ./favicon.ico /usr/share/nginx/html
 COPY ./manifest.json /usr/share/nginx/html
 COPY ./service-worker.js /usr/share/nginx/html
+
+# CH branding overlay (added by ch-patches)
+COPY ./ch-branding.css /usr/share/nginx/html
+COPY ./ch-header.js /usr/share/nginx/html
+COPY ./ch-footer.html /usr/share/nginx/html
+COPY ./ch-logo.png /usr/share/nginx/html
+
 COPY ./scripts /scripts
 
 RUN node /scripts/environment.common.js
